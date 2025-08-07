@@ -50,7 +50,7 @@ This project simulates and models hourly ride data to demonstrate how data scien
 ## 🚀 Getting Started
 
 1. Clone the repository  
-   `git clone https://github.com/SouravSreelan/uber-rides-demand-forecasting.git`
+   `[git clone https://github.com/SouravSreelan/uber-rides-demand-forecasting.git](https://github.com/SouravSreelan/Uber-Rides-Demand-Forecasting.git)`
 2. Install dependencies  
    `pip install -r requirements.txt`
 3. Run project  
