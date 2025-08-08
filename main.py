@@ -10,8 +10,8 @@ import xgboost as xgb
 from datetime import timedelta
 
 # Load Data (Example: NYC Taxi trip count)
-# url = 'https://data.cityofnewyork.us/api/views/buex-bi6w/rows.csv?accessType=DOWNLOAD'
-# df = pd.read_csv(url, parse_dates=['pickup_datetime'])
+url = 'https://data.cityofnewyork.us/api/views/buex-bi6w/rows.csv?accessType=DOWNLOAD'
+df = pd.read_csv(url, parse_dates=['pickup_datetime'])
 
 # For simulation purposes:
 date_rng = pd.date_range(start='2023-01-01', end='2023-01-31 23:00', freq='H')
@@ -46,7 +46,6 @@ model = xgb.XGBRegressor()
 model.fit(X, y)
 df['xgb_forecast'] = model.predict(X)
 
-# Visualization
 plt.figure(figsize=(12,6))
 plt.plot(df['datetime'], df['rides'], label='Actual', alpha=0.5)
 plt.plot(df['datetime'], df['sarima_forecast'], label='SARIMA')
