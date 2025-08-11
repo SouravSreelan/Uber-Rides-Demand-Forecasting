@@ -9,16 +9,13 @@ from prophet import Prophet
 import xgboost as xgb
 from datetime import timedelta
 
-# Load Data (Example: NYC Taxi trip count)
 url = 'https://data.cityofnewyork.us/api/views/buex-bi6w/rows.csv?accessType=DOWNLOAD'
 df = pd.read_csv(url, parse_dates=['pickup_datetime'])
 
-# For simulation purposes:
 date_rng = pd.date_range(start='2023-01-01', end='2023-01-31 23:00', freq='H')
 df = pd.DataFrame(date_rng, columns=['datetime'])
 df['rides'] = (np.sin(np.linspace(0, 3 * np.pi, len(df))) + np.random.normal(0, 0.5, len(df))) * 100 + 500
 
-# Feature Engineering
 df['hour'] = df['datetime'].dt.hour
 df['dayofweek'] = df['datetime'].dt.dayofweek
 df['is_weekend'] = df['dayofweek'].isin([5, 6]).astype(int)
@@ -55,4 +52,5 @@ plt.title("Uber Ride Demand Forecasting")
 plt.xlabel("Datetime")
 plt.ylabel("Predicted Rides")
 plt.tight_layout()
+
 plt.show()
