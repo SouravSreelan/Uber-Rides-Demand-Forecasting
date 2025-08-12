@@ -30,6 +30,7 @@ This project simulates and models hourly ride data to demonstrate how data scien
 | Facebook Prophet | Robust to holidays + changepoints     |
 | XGBoost        | Learns nonlinear patterns & feature lags |
 
+
 ---
 
 ## 🛠️ Key Features
@@ -57,6 +58,7 @@ This project simulates and models hourly ride data to demonstrate how data scien
    `python main.py`
 
 ---
+
 
 ## 📈 Use Case in Uber
 
