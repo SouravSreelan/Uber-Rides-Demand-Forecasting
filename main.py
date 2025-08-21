@@ -26,7 +26,6 @@ sarima_model = SARIMAX(df['rides'], order=(1,1,1), seasonal_order=(1,1,1,24))
 sarima_results = sarima_model.fit(disp=False)
 df['sarima_forecast'] = sarima_results.predict(start=0, end=len(df)-1, dynamic=False)
 
-# Prophet Model
 prophet_df = df[['datetime', 'rides']].rename(columns={'datetime': 'ds', 'rides': 'y'})
 prophet_model = Prophet(daily_seasonality=True)
 prophet_model.fit(prophet_df)
@@ -54,4 +53,5 @@ plt.xlabel("Datetime")
 plt.ylabel("Predicted Rides")
 plt.tight_layout()
 plt.show()
+
 
