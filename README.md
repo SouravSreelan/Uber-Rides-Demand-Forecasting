@@ -11,6 +11,7 @@ Uber operates in dynamic urban environments where rider demand fluctuates hourly
 
 This project simulates and models hourly ride data to demonstrate how data scientists at Uber might forecast ride volume using **advanced forecasting methods**.
 
+
 ---
 
 ## 🎯 Objectives
@@ -28,7 +29,7 @@ This project simulates and models hourly ride data to demonstrate how data scien
 |----------------|-----------------------------------------|
 | SARIMA         | Captures seasonality + trend            |
 | Facebook Prophet | Robust to holidays + changepoints     |
-| XGBoost        | Learns nonlinear patterns & feature lags |
+| XGBoost        | Learns nonlinear patterns & feature lags | 
 
 
 ---
@@ -40,7 +41,7 @@ This project simulates and models hourly ride data to demonstrate how data scien
 - Multi-model forecasting:
   - `SARIMA` with `statsmodels`
   - `Prophet` from Meta
-  - `XGBoost` with temporal regressors
+  - `XGBoost` with temporal regressors 
 - Metrics: MAE, RMSE
 - Visualization: comparison of true vs predicted rides
 
