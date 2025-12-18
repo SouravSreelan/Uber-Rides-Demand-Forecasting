@@ -9,7 +9,7 @@ from prophet import Prophet
 import xgboost as xgb
 from datetime import timedelta
 
-url = 'https://data.cityofnewyork.us/api/views/buex-bi6w/rows.csv?accessType=DOWNLOAD'
+url = 'https://data.cityofnewyork.us/api/views/buex-bi6w/rows.csv?accessType=DOWNLOADS'
 df = pd.read_csv(url, parse_dates=['pickup_datetime'])
 
 date_rng = pd.date_range(start='2023-01-01', end='2023-01-31 23:00', freq='H')
@@ -51,5 +51,6 @@ plt.xlabel("Datetime")
 plt.ylabel("Predicted Rides")
 plt.tight_layout()
 plt.show()
+
 
 
